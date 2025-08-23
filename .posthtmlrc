@@ -7,12 +7,38 @@
       "root": "./src/partials",
       "locals": {
         "top": [],
-        "body": [],
+        "body": [
+          {
+            "type": "graphic",
+            "value": {
+              "asset": "scrolly.html"
+            }
+          },
+          {
+            "type": "text",
+            "value": "<i>Spectrum Editor Manuela Moreyra can be contacted at </i><a href=\"mailto:manuela.moreyra@columbiaspectator.com\"><i>manuela.moreyra@columbiaspectator.com</i></a><i>. Follow her on X </i><i>@</i><a href=\"https://x.com/manuelamoreyrat?s=11\"><i>manuelamoreyrat</i></a><i>.</i>"
+          },
+          {
+            "type": "text",
+            "value": "<i>Graphics Editor Jenny Ye can be contacted at </i><a href=\"mailto:jenny.ye@columbiaspectator.com\"><i>jenny.ye@columbiaspectator.com</i></a><i>. </i><i>Follow Spectator on X </i><a href=\"https://twitter.com/columbiaspec?lang=en\"><i>@ColumbiaSpec</i></a><i>.</i>"
+          },
+          {
+            "type": "text",
+            "value": "<b><i>Want to keep up with breaking news? Subscribe to our </i></b><a href=\"https://columbiaspectator.us4.list-manage.com/subscribe?u=a3d2eeb1ae5560ca04f82f042&id=e51c51d62d\"><b><i>email newsletter </i></b></a><b><i>and like Spectator on </i></b><a href=\"https://www.facebook.com/columbiaspectator\"><b><i>Facebook</i></b></a><b><i>. </i></b>"
+          }
+        ],
+        "headline": "Welcome to the neighborhood: Inside Community Board 9 and Columbia’s role in West Harlem",
+        "dek": "From campus expansion to public access and community investments, CB9 reviews and responds to the University’s influence on local neighborhoods.",
+        "date": "August 23, 2025",
+        "byline": "By <a href=\"https://www.columbiaspectator.com/contributors/manuela-moreyra/\">Manuela Moreyra</a>",
+        "byline2": "Graphic by <a href=\"https://www.columbiaspectator.com/contributors/jenny-ye/\">Jenny Ye</a>",
+        "cover_asset": "",
+        "cover_caption": "",
         "USE_NEWS_NAV": true,
         "USE_EYE_NAV": false,
-        "USE_COVER_HED": false,
+        "USE_COVER_HED": true,
         "IS_EMBED": false,
-        "DOC_URL": null
+        "DOC_URL": "https://docs.google.com/document/d/1JecLdLkW1Lpa170CUNlk9XPTqSv4g8O8nLd6cV14XYo/edit?tab=t.0"
       }
     }
   }
