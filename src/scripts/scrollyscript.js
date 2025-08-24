@@ -2,6 +2,7 @@ const layers = {
     // Base maps
     nycBase: d3.selectAll('[class*="nyc-img"]'),
     manhattanBase: d3.selectAll('[class*="manhattan-img"]'),
+    council: d3.selectAll('[class*="council-img"]'),
 
     // Neighborhood outlines/images
     cb9Outline: d3.selectAll('[class*="cb9-img"]'),
@@ -15,6 +16,7 @@ const layers = {
     labels: {
         cb9: d3.selectAll(".g-cb9"),
         manhattan: d3.selectAll(".g-manhattan"),
+        council: d3.selectAll(".g-council"),
         manhattanville: d3.selectAll(".g-manhattanville"),
         hamilton: d3.selectAll(".g-hamilton"),
         morningside: d3.selectAll(".g-morningside"),
@@ -30,6 +32,7 @@ function reset() {
 
     // Hide all other image layers
     layers.manhattanBase.classed("hidden", true).classed("zoom", false);
+    layers.council.classed("hidden", true);
     layers.cb9Outline.classed("hidden", true);
     layers.neighborhoods.classed("hidden", true);
     layers.manhattanville.classed("hidden", true);
@@ -46,7 +49,18 @@ function zoomManhattan() {
     layers.nycBase.classed("hidden", true);
 
     layers.labels.manhattan.classed("hidden", false);
-    layers.manhattanBase.classed("hidden", false).classed("fade_out", false);
+    layers.manhattanBase.classed("hidden", false);
+
+    layers.council.classed("hidden", true);
+    layers.labels.council.classed("hidden", true);
+}
+
+function zoomCouncil() {
+    layers.manhattanBase.classed("hidden", true);
+    layers.labels.manhattan.classed("hidden", true);
+
+    layers.council.classed("hidden", false);
+    layers.labels.council.classed("hidden", false);
 
     layers.labels.cb9.classed("hidden", true);
     layers.cb9Outline.classed("hidden", true);
@@ -54,8 +68,8 @@ function zoomManhattan() {
 
 function fadeCB9() {
     // layers.manhattanBase.classed("fade_out", true);
-    layers.manhattanBase.classed("hidden", true);
-    layers.labels.manhattan.classed("hidden", true);
+    layers.council.classed("hidden", true);
+    layers.labels.council.classed("hidden", true);
 
     layers.labels.cb9.classed("hidden", false);
     layers.cb9Outline.classed("hidden", false);
@@ -136,7 +150,8 @@ const scroller = scrollama();
 const steps = [
     { id: "#step-0", action: reset },
     { id: "#step-1", action: zoomManhattan },
-    { id: "#step-4", action: zoomManhattan },
+    { id: "#step-3", action: zoomManhattan },
+    { id: "#step-4", action: zoomCouncil },
     { id: "#step-5", action: fadeCB9 },
     { id: "#step-5a", action: showMorningside },
     { id: "#step-6", action: showManhattanville },
